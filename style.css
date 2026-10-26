@@ -597,11 +597,11 @@ height: 35px;
   .fcon .options{
     margin: 0px 5px;
     padding:4px 8px;
-    
+    width:max-content;
     display:flex;
   }
 
-  .fcon .options{
+  .fcon .options p{
     text-align:center;
     display:flex
   }
