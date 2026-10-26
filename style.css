@@ -219,6 +219,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 15px;
+  overflow-x:scroll;
 }
 
 .fcon .options {
