@@ -230,6 +230,8 @@ body {
   border: 1px solid #ccc;
   margin: 0px 10px;
   cursor: pointer;
+  white-space:no-wrap;
+  width:fit-content;
 }
 
 .fcon .options:active {
