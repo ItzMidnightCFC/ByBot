@@ -148,7 +148,7 @@ body {
   flex-direction: column;
   /* background-color: orange; */
   overflow: hidden;
-  height: 90vh;
+  height: 70vh;
 }
 
 .chat-side {
