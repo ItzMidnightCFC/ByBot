@@ -230,11 +230,7 @@ body {
   border: 1px solid #ccc;
   margin: 0px 10px;
   cursor: pointer;
-  white-space:no-wrap;
-  width:150px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  
 }
 
 .fcon .options:active {
@@ -600,6 +596,7 @@ height: 35px;
   
   .fcon .options{
     margin: 0px 5px;
+    padding:4px 8px;
   }
   
   #ha p{
