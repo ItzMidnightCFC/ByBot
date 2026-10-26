@@ -571,10 +571,6 @@ body.dark #themebtn path {
     width: 20px;
   }
 
-  .chat-side {
-    height: 85%;
-  }
-
   .fresh-look {
     height: 85%;
   }
@@ -583,12 +579,9 @@ body.dark #themebtn path {
     padding: 0px 20px;
   }
 
-  .message-side {
-    height: auto;
-  }
-
   .fcon .options {
     margin: 0px 5px;
+    padding: 4px 8px;
   }
 
   #ha p {
