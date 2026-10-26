@@ -597,6 +597,7 @@ height: 35px;
   .fcon .options{
     margin: 0px 5px;
     padding:4px 8px;
+    display:flex;
   }
   
   #ha p{
