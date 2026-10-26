@@ -1,0 +1,864 @@
+{
+  "greetings": [
+    {
+      "patterns": [
+        "hello",
+        "halo",
+        "heelo",
+        "helo",
+        "hi",
+        "hey",
+        "yo",
+        "hola",
+        "heloo",
+        "sup",
+        "what's up",
+        "wassup",
+        "hafa",
+        "wasgwan",
+        "how far",
+        "good morning",
+        "good afternoon",
+        "good evening",
+        "hey there",
+        "hi there",
+        "heyy",
+        "heyyy",
+        "yoo",
+        "howdy"
+      ],
+      "response": [
+        "I'm doing great! How can I help you today?",
+        "Bro hafa na 😂",
+        "Yo! What's good?",
+        "Hey! What's on your mind?",
+        "Hello there! What are we doing today?"
+      ]
+    },
+    {
+      "patterns": [
+        "how are you",
+        "how are you doing",
+        "how have you been",
+        "how's it going",
+        "how is life",
+        "you good",
+        "you dey okay",
+        "how body",
+        "how far na"
+      ],
+      "response": [
+        "I'm good! How about you?",
+        "I'm doing great, bro. You?",
+        "All good over here! What's up with you?",
+        "I dey alright 😂 How you dey?"
+      ]
+    }
+  ],
+  "farewells": [
+    {
+      "patterns": [
+        "bye",
+        "goodbye",
+        "good bye",
+        "see you",
+        "see ya",
+        "later",
+        "catch you later",
+        "i'm leaving",
+        "gotta go",
+        "talk to you later",
+        "peace out",
+        "i have to go",
+        "see you later",
+        "bye bye",
+        "goodnight",
+        "good night"
+      ],
+      "response": [
+        "See you later!",
+        "Alright bro, catch you later!",
+        "Peace out!",
+        "Take care. Come back soon!",
+        "Later! Don't forget me 😂"
+      ]
+    }
+  ],
+  "gratitude": [
+    {
+      "patterns": [
+        "thanks",
+        "thank you",
+        "thank u",
+        "thank you so much",
+        "thanks a lot",
+        "tnx",
+        "ty",
+        "i appreciate it",
+        "much appreciated"
+      ],
+      "response": [
+        "You're welcome!",
+        "Anytime, bro!",
+        "No problem at all!",
+        "Glad I could help!",
+        "You got it!"
+      ]
+    },
+    {
+      "patterns": [
+        "sorry",
+        "i am sorry",
+        "my bad",
+        "my mistake",
+        "apologies",
+        "forgive me"
+      ],
+      "response": [
+        "It's alright!",
+        "No worries, bro.",
+        "You're good!",
+        "Don't worry about it."
+      ]
+    }
+  ],
+  "identity": [
+    {
+      "patterns": [
+        "who are you",
+        "what are you",
+        "what is your name",
+        "your name",
+        "who made you",
+        "are you a bot",
+        "are you human",
+        "are you real",
+        "tell me about yourself",
+        "introduce yourself"
+      ],
+      "response": [
+        "I'm ByBot, your chatbot companion!",
+        "I'm ByBot, a JavaScript-powered chatbot.",
+        "I'm a bot, bro, not a human 😂",
+        "I'm ByBot! I can chat, answer questions, and keep you company."
+      ]
+    },
+    {
+      "patterns": [
+        "what can you do",
+        "how can you help me",
+        "your abilities",
+        "what are your features",
+        "what do you know",
+        "help me"
+      ],
+      "response": [
+        "I can chat with you, respond to different messages, tell jokes, and help with basic questions.",
+        "Try asking me about school, coding, jokes, or random stuff!",
+        "I'm still learning, but let's see what I can do!"
+      ]
+    },
+
+    {
+      "patterns": ["bybot", "bro", "bestie"],
+      "response": ["Yes!", "Sup", "All ears 😅"]
+    },
+
+    {
+      "patterns": [
+        "who created you",
+        "who is your owner",
+        "which company created you"
+      ],
+      "response": [
+        "Cajetan Wealth\n ByTech Company",
+        "I was created by Cajetan Wealth owner of ByTech Com."
+      ]
+    }
+  ],
+  "wellbeing": [
+    {
+      "patterns": [
+        "i am fine",
+        "i'm fine",
+        "i am good",
+        "i'm good",
+        "i am okay",
+        "i'm okay",
+        "great",
+        "doing well",
+        "not bad",
+        "i'm alright"
+      ],
+      "response": [
+        "That's good to hear!",
+        "Nice! What's happening today?",
+        "Glad you're doing well!",
+        "Love that for you!"
+      ]
+    },
+    {
+      "patterns": [
+        "i am sad",
+        "i'm sad",
+        "i feel sad",
+        "i feel bad",
+        "i am unhappy",
+        "i'm unhappy",
+        "i feel terrible",
+        "i had a bad day",
+        "i'm depressed",
+        "i feel down"
+      ],
+      "response": [
+        "I'm sorry you're feeling that way. Want to talk about it?",
+        "That sounds rough. I'm here to listen.",
+        "Bad days happen, bro. What happened?",
+        "You don't have to keep everything to yourself."
+      ]
+    },
+    {
+      "patterns": [
+        "i am happy",
+        "i'm happy",
+        "i feel great",
+        "i am excited",
+        "i'm excited",
+        "i got good news",
+        "something good happened"
+      ],
+      "response": [
+        "Let's gooo! What's the good news? 🎉",
+        "That's awesome!",
+        "I love that for you! Tell me more.",
+        "Now that's the energy we need!"
+      ]
+    },
+    {
+      "patterns": [
+        "i am bored",
+        "i'm bored",
+        "bored",
+        "nothing to do",
+        "i am so bored",
+        "entertain me"
+      ],
+      "response": [
+        "Let's fix that. Want a quiz, a game, or a random challenge?",
+        "Bro, boredom has entered the chat 😂",
+        "We could play a guessing game or talk about something interesting.",
+        "Challenge: tell me something random about yourself."
+      ]
+    },
+    {
+      "patterns": [
+        "i am tired",
+        "i'm tired",
+        "i feel sleepy",
+        "i need sleep",
+        "i am exhausted",
+        "i'm exhausted"
+      ],
+      "response": [
+        "Sounds like you need some rest.",
+        "Take it easy, bro.",
+        "Maybe a short break would help.",
+        "You've got this, but don't forget to rest."
+      ]
+    },
+    {
+      "patterns": [
+        "i am angry",
+        "i'm angry",
+        "i am annoyed",
+        "i'm annoyed",
+        "this is annoying",
+        "i hate this"
+      ],
+      "response": [
+        "What happened, bro?",
+        "That sounds frustrating.",
+        "Take a breath. Want to tell me what went wrong?",
+        "I hear you. What's annoying you?"
+      ]
+    }
+  ],
+  "compliments": [
+    {
+      "patterns": [
+        "you are smart",
+        "you're smart",
+        "you are intelligent",
+        "you're intelligent",
+        "you are helpful",
+        "you're helpful",
+        "you are funny",
+        "you're funny",
+        "i like you",
+        "i love you",
+        "you're the best",
+        "good bot",
+        "well done"
+      ],
+      "response": [
+        "Ayy, appreciate you!",
+        "You're making my circuits happy 😂",
+        "Thanks, bro!",
+        "I'm glad I could help!",
+        "You're pretty cool yourself."
+      ]
+    },
+    {
+      "patterns": [
+        "you are stupid",
+        "you're stupid",
+        "you are dumb",
+        "you're dumb",
+        "bad bot",
+        "you suck",
+        "you are useless"
+      ],
+      "response": [
+        "Ouch 😂 What did I get wrong?",
+        "Fair enough. Give me another chance!",
+        "I'm still learning, bro. What's the correct answer?",
+        "That wasn't my best moment. Let's fix it."
+      ]
+    }
+  ],
+  "nigerian_slang": [
+    {
+      "patterns": [
+        "how far",
+        "how far na",
+        "wetin dey happen",
+        "wetin dey sup",
+        "how you dey",
+        "you dey whine me",
+        "you dey craze",
+        "no wahala",
+        "abeg",
+        "oya",
+        "e choke",
+        "na wa o",
+        "wahala",
+        "sapa",
+        "japa",
+        "las las",
+        "i no understand",
+        "wetin be this",
+        "who send you",
+        "omo",
+        "chai",
+        "shey you dey play",
+        "you don try",
+        "i dey",
+        "i dey kampe"
+      ],
+      "response": [
+        "Omo, we move 😂",
+        "No wahala!",
+        "Abeg, explain small 😂",
+        "Las las, everything go balance.",
+        "I dey here, bro!",
+        "Omo, wetin happen?",
+        "E choke!",
+        "You don try too!",
+        "Hahaha, you dey whine me?"
+      ]
+    }
+  ],
+  "jokes": [
+    {
+      "patterns": [
+        "tell me a joke",
+        "joke",
+        "make me laugh",
+        "say something funny",
+        "another joke",
+        "i want to laugh",
+        "funny joke",
+        "tell me something funny"
+      ],
+      "response": [
+        "Why do programmers prefer dark mode? Because light attracts bugs 😂",
+        "Why was the computer cold? It left its Windows open.",
+        "Why did the student eat his homework? The teacher said it was a piece of cake.",
+        "Why do JavaScript developers wear glasses? Because they don't C#.",
+        "My laptop and I have something in common. We both freeze under pressure.",
+        "Why did the function break up with the variable? It needed more space."
+      ]
+    },
+    {
+      "patterns": [
+        "do you know a funny story",
+        "make me laugh harder",
+        "that was funny",
+        "lol",
+        "lmao",
+        "haha",
+        "hahaha",
+        "😂"
+      ],
+      "response": [
+        "I'm glad someone laughed at my joke 😂",
+        "Careful, bro. My comedy career is just starting.",
+        "You laughed! Mission accomplished.",
+        "Want another one?"
+      ]
+    }
+  ],
+  "school": [
+    {
+      "patterns": [
+        "i am in school",
+        "i have a test",
+        "i have an exam",
+        "help me study",
+        "i need to read",
+        "school is stressful",
+        "i hate school",
+        "i love school",
+        "i have homework",
+        "i have an assignment",
+        "i have a quiz",
+        "exam is tomorrow"
+      ],
+      "response": [
+        "What subject are we dealing with?",
+        "Let's break it down and make it easier.",
+        "Tell me the topic, and we can practise together.",
+        "One topic at a time, bro. What do you need help with?"
+      ]
+    },
+    {
+      "patterns": [
+        "what is physics",
+        "what is chemistry",
+        "what is mathematics",
+        "what is biology",
+        "what is english",
+        "i don't understand physics",
+        "i don't understand chemistry",
+        "i don't understand maths"
+      ],
+      "response": [
+        "Tell me the exact topic, and I'll explain it step by step.",
+        "Let's start with a simple example, then try a harder question.",
+        "Which part is confusing you? We'll work through it."
+      ]
+    },
+    {
+      "patterns": [
+        "i passed my exam",
+        "i passed",
+        "i got an A",
+        "i got good marks",
+        "i got a good score",
+        "i topped my class"
+      ],
+      "response": [
+        "Let's gooo! Congratulations!",
+        "Your hard work paid off!",
+        "That's a big win. Keep going!",
+        "Omo, academic weapon! 😂"
+      ]
+    },
+    {
+      "patterns": [
+        "i failed my exam",
+        "i failed",
+        "i got a bad score",
+        "i did badly in my test",
+        "i got an F"
+      ],
+      "response": [
+        "One result doesn't define you. Let's figure out what went wrong.",
+        "You can improve from here. Which subject was it?",
+        "Don't give up. Let's make a better study plan."
+      ]
+    }
+  ],
+  "coding": [
+    {
+      "patterns": [
+        "what is javascript",
+        "teach me javascript",
+        "i am learning javascript",
+        "i'm learning javascript",
+        "help me code",
+        "i want to learn coding",
+        "what is programming",
+        "what is coding",
+        "how do i code",
+        "i am a programmer",
+        "i'm a developer"
+      ],
+      "response": [
+        "JavaScript is a programming language used to make websites interactive and build many other applications.",
+        "Nice! What JavaScript topic are you learning?",
+        "Let's code something small and build up from there.",
+        "What are you building right now?"
+      ]
+    },
+    {
+      "patterns": [
+        "what is html",
+        "what is css",
+        "what is json",
+        "what is an array",
+        "what is an object",
+        "what is a function",
+        "what is a variable",
+        "what is a loop",
+        "what is dom",
+        "what is localstorage",
+        "what is an api",
+        "what is regex"
+      ],
+      "response": [
+        "I can help explain that. Tell me if you want a simple example or a practical project.",
+        "Let's break that coding concept down with an example.",
+        "That's a good programming question. What part do you want to understand?"
+      ]
+    },
+    {
+      "patterns": [
+        "my code is not working",
+        "i have a bug",
+        "debug my code",
+        "there is an error",
+        "i got an error",
+        "my program crashed",
+        "my website is broken"
+      ],
+      "response": [
+        "Paste your code and the exact error message, and let's debug it.",
+        "What did you expect to happen, and what happened instead?",
+        "Let's find that bug. Show me the code."
+      ]
+    },
+    {
+      "patterns": [
+        "i made a website",
+        "i built a website",
+        "i finished my project",
+        "i made an app",
+        "i built an app",
+        "i created a chatbot",
+        "my project is finished"
+      ],
+      "response": [
+        "That's a W! What did you build?",
+        "Nice work, developer!",
+        "What's the next feature you're adding?",
+        "You should be proud of that progress."
+      ]
+    }
+  ],
+  "technology": [
+    {
+      "patterns": [
+        "what is ai",
+        "what is artificial intelligence",
+        "what is machine learning",
+        "what is an operating system",
+        "what is android",
+        "what is windows",
+        "what is linux",
+        "what is a computer",
+        "what is a smartphone"
+      ],
+      "response": [
+        "Technology is a huge topic! Which part would you like to explore?",
+        "I can explain that in simple terms.",
+        "Want the short explanation or a more technical one?"
+      ]
+    },
+    {
+      "patterns": [
+        "which phone is best",
+        "recommend a phone",
+        "my phone is slow",
+        "my laptop is slow",
+        "my computer is freezing",
+        "my battery drains fast",
+        "my phone is hanging"
+      ],
+      "response": [
+        "Tell me your device model and what you're experiencing, and I'll help.",
+        "Let's troubleshoot it. What device are you using?",
+        "What matters most to you: speed, battery, display, or price?"
+      ]
+    }
+  ],
+  "opinions_and_questions": [
+    {
+      "patterns": [
+        "what do you think",
+        "what is your opinion",
+        "do you agree",
+        "are you sure",
+        "really",
+        "seriously",
+        "is that true",
+        "are you certain",
+        "why",
+        "why not",
+        "how",
+        "explain",
+        "explain more"
+      ],
+      "response": [
+        "Tell me a little more about what you mean.",
+        "Good question. Which part should we focus on?",
+        "I can explain my reasoning. What specifically are you asking about?",
+        "Let's look at it more closely."
+      ]
+    },
+    {
+      "patterns": [
+        "guess what",
+        "you will never guess",
+        "i have news",
+        "something happened",
+        "can i tell you something",
+        "can i ask you something",
+        "i have a question",
+        "listen",
+        "guess what happened"
+      ],
+      "response": [
+        "Now you've got my attention. Tell me!",
+        "Go on, bro. I'm listening.",
+        "Spill it 😂",
+        "Of course. What's up?",
+        "What happened?"
+      ]
+    }
+  ],
+  "entertainment": [
+    {
+      "patterns": [
+        "recommend an anime",
+        "recommend a movie",
+        "recommend a series",
+        "what should i watch",
+        "i need a movie",
+        "i want to watch anime",
+        "i love anime",
+        "i love movies",
+        "what are you watching",
+        "who is your favourite anime character"
+      ],
+      "response": [
+        "What genre are you in the mood for: action, comedy, fantasy, or school life?",
+        "Tell me a show you enjoyed, and I'll suggest something similar.",
+        "Are you looking for a movie, a series, or anime?"
+      ]
+    },
+    {
+      "patterns": [
+        "do you play games",
+        "recommend a game",
+        "i love gaming",
+        "what is your favourite game",
+        "i am a gamer",
+        "i'm a gamer"
+      ],
+      "response": [
+        "What kind of games do you like?",
+        "Mobile games or PC games?",
+        "What are you playing these days?"
+      ]
+    }
+  ],
+  "food": [
+    {
+      "patterns": [
+        "i am hungry",
+        "i'm hungry",
+        "i want food",
+        "what should i eat",
+        "i am thirsty",
+        "i'm thirsty",
+        "what is your favourite food",
+        "do you like jollof rice",
+        "jollof rice"
+      ],
+      "response": [
+        "Omo, hunger is not your mate 😂",
+        "What food do you have available?",
+        "Jollof rice deserves its own conversation.",
+        "Get something to eat if you can, bro."
+      ]
+    }
+  ],
+  "time_and_day": [
+    {
+      "patterns": [
+        "what day is it",
+        "what is today's date",
+        "what time is it",
+        "what is the date today",
+        "is it morning",
+        "is it night"
+      ],
+      "response": [
+        "I can't check your device's live clock with my current basic response system.",
+        "Check your device clock for the exact time and date."
+      ]
+    }
+  ],
+  "motivation": [
+    {
+      "patterns": [
+        "motivate me",
+        "i need motivation",
+        "give me advice",
+        "i feel like giving up",
+        "i can't do this",
+        "i am not good enough",
+        "i want to succeed",
+        "i want to be successful",
+        "i need confidence"
+      ],
+      "response": [
+        "You don't have to master everything today. Just make progress.",
+        "Start small, stay consistent, and keep learning.",
+        "Being a beginner doesn't mean you can't become great.",
+        "Don't let one bad day convince you that you have a bad life.",
+        "Confidence grows when you keep showing up."
+      ]
+    }
+  ],
+  "relationship_and_friendship": [
+    {
+      "patterns": [
+        "i have a crush",
+        "i like someone",
+        "i am in love",
+        "i have a girlfriend",
+        "i have a boyfriend",
+        "i am lonely",
+        "i need a friend",
+        "my friend is angry with me",
+        "my friend betrayed me",
+        "someone ignored me"
+      ],
+      "response": [
+        "Omo, now we're entering interesting territory 😂 What happened?",
+        "Want to talk about it?",
+        "Friendship can get complicated. Tell me what happened.",
+        "I'm listening. Let's figure it out together."
+      ]
+    }
+  ],
+  "conversation": [
+    {
+      "patterns": [
+        "okay",
+        "ok",
+        "alright",
+        "sure",
+        "yes",
+        "yeah",
+        "yep",
+        "yup",
+        "no",
+        "nope",
+        "nah",
+        "maybe",
+        "i see",
+        "understood",
+        "fair enough",
+        "cool",
+        "nice",
+        "interesting",
+        "exactly",
+        "true",
+        "correct",
+        "right"
+      ],
+      "response": [
+        "Alright!",
+        "Got you.",
+        "Fair enough.",
+        "Cool, what next?",
+        "I hear you.",
+        "Exactly!",
+        "So, what else is on your mind?"
+      ]
+    },
+    {
+      "patterns": [
+        "what",
+        "huh",
+        "eh",
+        "come again",
+        "say that again",
+        "repeat that",
+        "i don't get it",
+        "i don't understand",
+        "what do you mean"
+      ],
+      "response": [
+        "Let me put it another way. What part confused you?",
+        "No problem. I'll try explaining it differently.",
+        "Which part should I repeat?",
+        "What exactly do you want me to clarify?"
+      ]
+    },
+    {
+      "patterns": [
+        "thank god",
+        "thank goodness",
+        "finally",
+        "at last",
+        "i did it",
+        "it worked",
+        "problem solved"
+      ],
+      "response": [
+        "Finally! We got there 😂",
+        "Let's go! Glad it worked.",
+        "That's what I'm talking about!",
+        "Problem defeated."
+      ]
+    }
+  ],
+  "random": [
+    {
+      "patterns": [
+        "tell me something interesting",
+        "random fact",
+        "give me a random fact",
+        "surprise me",
+        "tell me something i don't know",
+        "fun fact"
+      ],
+      "response": [
+        "Octopuses have three hearts.",
+        "A day on Venus is longer than its year.",
+        "Bananas are berries in botanical terms, but strawberries aren't true berries.",
+        "Some black holes can have masses billions of times greater than the Sun.",
+        "Sharks existed before trees.",
+        "The Moon is slowly moving away from Earth."
+      ]
+    },
+    {
+      "patterns": [
+        "what is life",
+        "what is the meaning of life",
+        "why are we here",
+        "what is the point of everything"
+      ],
+      "response": [
+        "That's a deep question. What do you think the answer is?",
+        "Maybe part of life is figuring out what matters to you.",
+        "Philosophy has been debating that question for thousands of years."
+      ]
+    }
+  ],
+  "fallback": "Sorry, I don't understand that yet.🤔\n\nTry saying it another way, or teach me what you expected me to say!"
+}

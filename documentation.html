@@ -1,0 +1,1192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/file_000000004c88821194cafeeea699fb8f.png"
+      type="image/x-icon"
+    />
+    <title>ByBot Documentation</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #ffffff;
+        color: #171717;
+      }
+
+      button,
+      input {
+        font-family: inherit;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        display: flex;
+        min-height: 100vh;
+      }
+
+      .side-section {
+        background: #fff;
+        height: 100vh;
+        width: 300px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid #ccc;
+        position: sticky;
+        top: 0;
+      }
+
+      #brand {
+        display: flex;
+        align-items: center;
+        margin: 20px;
+      }
+
+      #brand svg {
+        margin-right: 10px;
+        flex-shrink: 0;
+      }
+
+      #botName {
+        font-size: 20px;
+        font-weight: normal;
+      }
+
+      #searchbar {
+        margin: 10px 20px;
+        padding: 10px 14px;
+        border-radius: 16px;
+        border: 1px solid #000;
+        outline: none;
+        background: #fff;
+        color: #171717;
+        width: calc(100% - 40px);
+      }
+
+      #searchbar:focus {
+        border-color: #6657eb;
+      }
+
+      .side-heading {
+        padding: 15px 25px 5px;
+        color: #676666;
+        font-size: 12px;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .doc-nav {
+        padding: 5px 15px 20px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+      }
+
+      .doc-nav a {
+        display: block;
+        padding: 11px 12px;
+        margin: 3px 0;
+        border-radius: 5px;
+        font-size: 14px;
+        border: 1px solid transparent;
+        transition: 0.2s ease;
+      }
+
+      .doc-nav a:hover {
+        background: #6657eb0d;
+        border-color: #6657eb45;
+      }
+
+      .doc-nav a.active {
+        background: #6657eb18;
+        border-color: #6657eb70;
+        color: #6657eb;
+      }
+
+      .doc-nav a.hidden {
+        display: none;
+      }
+
+      .side-bottom {
+        margin-top: auto;
+        padding: 15px;
+        border-top: 1px solid #ccc;
+      }
+
+      .back-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px;
+        border: 1px dashed #000;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: 0.2s ease;
+      }
+
+      .back-btn:hover {
+        opacity: 0.7;
+      }
+
+      .main-section {
+        flex: 1;
+        min-width: 0;
+        height: 100vh;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scroll-behavior: smooth;
+      }
+
+      .doc-top {
+        height: 70px;
+        padding: 10px 35px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 5;
+      }
+
+      .doc-top h2 {
+        font-size: 19px;
+        font-weight: normal;
+      }
+
+      .doc-top h2 span {
+        color: #6657eb;
+      }
+
+      .version {
+        margin-left: auto;
+        font-size: 12px;
+        color: #676666;
+        border: 1px solid #ccc;
+        padding: 6px 10px;
+        border-radius: 15px;
+      }
+
+      #menuBtn {
+        display: none;
+        height: 40px;
+        width: 40px;
+        flex-shrink: 0;
+        border-radius: 100%;
+        border: 1px solid #ccc;
+        background: transparent;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        cursor: pointer;
+      }
+
+      #menuBtn:active {
+        opacity: 0.7;
+      }
+
+      .doc-content {
+        max-width: 900px;
+        padding: 45px 50px 80px;
+        margin: 0 auto;
+      }
+
+      .doc-section {
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #e5e5e5;
+        scroll-margin-top: 100px;
+      }
+
+      .doc-section:last-child {
+        border-bottom: none;
+      }
+
+      .eyebrow {
+        color: #6657eb;
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+
+      .doc-section h1 {
+        font-size: 38px;
+        font-weight: normal;
+        line-height: 1.3;
+        margin-bottom: 15px;
+      }
+
+      .doc-section h1 span {
+        color: #6657eb;
+      }
+
+      .doc-section h2 {
+        font-size: 25px;
+        font-weight: normal;
+        margin-bottom: 18px;
+      }
+
+      .doc-section h3 {
+        font-size: 17px;
+        font-weight: normal;
+        margin: 25px 0 10px;
+      }
+
+      .doc-section p {
+        color: #474747;
+        font-size: 15px;
+        line-height: 1.9;
+        margin-bottom: 15px;
+      }
+
+      .doc-section ul,
+      .doc-section ol {
+        padding-left: 23px;
+        margin: 15px 0;
+      }
+
+      .doc-section li {
+        color: #474747;
+        font-size: 14px;
+        line-height: 1.9;
+        padding-left: 5px;
+        margin-bottom: 7px;
+      }
+
+      .doc-section li::marker {
+        color: #6657eb;
+      }
+
+      .intro-box {
+        border: 1px solid #6657eb55;
+        background: #6657eb0a;
+        border-radius: 8px;
+        padding: 20px;
+        margin-top: 25px;
+      }
+
+      .intro-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      .info-box {
+        border-left: 3px solid #6657eb;
+        padding: 15px 18px;
+        background: #6657eb0a;
+        margin: 20px 0;
+        border-radius: 0 5px 5px 0;
+      }
+
+      .info-box p {
+        margin-bottom: 0;
+      }
+
+      .code-box {
+        background: #f6f6f6;
+        border: 1px solid #ddd;
+        border-radius: 7px;
+        padding: 18px;
+        margin: 15px 0 20px;
+        overflow-x: auto;
+      }
+
+      .code-box pre {
+        font-family: Consolas, Monaco, monospace;
+        font-size: 13px;
+        line-height: 1.8;
+        color: #292929;
+        white-space: pre;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .feature-card {
+        border: 1px solid #ccc;
+        border-radius: 7px;
+        padding: 18px;
+        transition: 0.2s ease;
+      }
+
+      .feature-card:hover {
+        border-color: #6657eb;
+      }
+
+      .feature-card h3 {
+        margin: 0 0 10px;
+        font-size: 16px;
+      }
+
+      .feature-card p {
+        font-size: 13px;
+        line-height: 1.8;
+        margin: 0;
+      }
+
+      .step {
+        display: flex;
+        gap: 15px;
+        margin: 22px 0;
+      }
+
+      .step-number {
+        height: 30px;
+        width: 30px;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #6657eb;
+        border-radius: 50%;
+        color: #6657eb;
+        font-size: 13px;
+      }
+
+      .step-content h3 {
+        margin: 3px 0 7px;
+      }
+
+      .step-content p {
+        margin: 0;
+      }
+
+      .doc-footer {
+        padding: 25px 0;
+        border-top: 1px solid #ccc;
+        color: #676666;
+        font-size: 12px;
+        text-align: center;
+      }
+
+      .doc-footer span {
+        color: #6657eb;
+      }
+
+      #noResults {
+        display: none;
+        text-align: center;
+        color: #676666;
+        font-size: 13px;
+        padding: 30px 10px;
+      }
+
+      #overlay {
+        display: none;
+      }
+
+      body.dark {
+        background: #000;
+        color: #fff;
+      }
+
+      body.dark .side-section {
+        background: #000;
+        color: #fff;
+        border-color: #393838;
+      }
+
+      body.dark #searchbar {
+        background: #000;
+        color: #fff;
+        border-color: #393838;
+      }
+
+      body.dark .side-heading {
+        color: #b2b1b1;
+      }
+
+      body.dark .doc-nav a:hover {
+        background: #7650ff18;
+        border-color: #7650ff45;
+      }
+
+      body.dark .doc-nav a.active {
+        background: #7650ff30;
+        border-color: #7650ff70;
+        color: #a99dff;
+      }
+
+      body.dark .side-bottom {
+        border-color: #393838;
+      }
+
+      body.dark .back-btn {
+        border-color: #393838;
+      }
+
+      body.dark .doc-top {
+        background: #000;
+        border-color: #393838;
+      }
+
+      body.dark .doc-top h2 span,
+      body.dark .eyebrow,
+      body.dark .doc-section h1 span,
+      body.dark .doc-footer span {
+        color: #a99dff;
+      }
+
+      body.dark .version {
+        color: #c5c5c5;
+        border-color: #393838;
+      }
+
+      body.dark #menuBtn {
+        border-color: #393838;
+      }
+
+      body.dark #menuBtn svg path {
+        stroke: #fff;
+      }
+
+      body.dark .doc-section {
+        border-color: #393838;
+      }
+
+      body.dark .doc-section p,
+      body.dark .doc-section li {
+        color: #c3c2c2;
+      }
+
+      body.dark .intro-box,
+      body.dark .info-box {
+        background: #7650ff12;
+        border-color: #7650ff70;
+      }
+
+      body.dark .code-box {
+        background: #111;
+        border-color: #393838;
+      }
+
+      body.dark .code-box pre {
+        color: #dedddd;
+      }
+
+      body.dark .feature-card {
+        border-color: #393838;
+      }
+
+      body.dark .feature-card:hover {
+        border-color: #7650ff;
+      }
+
+      body.dark .step-number {
+        border-color: #a99dff;
+        color: #a99dff;
+      }
+
+      body.dark .doc-footer {
+        border-color: #393838;
+        color: #b2b1b1;
+      }
+
+      @media (max-width: 900px) {
+        .side-section {
+          width: 260px;
+        }
+
+        .doc-content {
+          padding: 35px 30px 60px;
+        }
+
+        .doc-top {
+          padding: 10px 25px;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .side-section {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 75%;
+          max-width: 320px;
+          z-index: 30;
+          transform: translateX(-100%);
+          transition: transform 0.25s ease-in-out;
+          display: flex;
+        }
+
+        .side-section.slide {
+          transform: translateX(0);
+        }
+
+        #overlay {
+          position: fixed;
+          inset: 0;
+          background: #00000047;
+          z-index: 20;
+        }
+
+        #overlay.show {
+          display: block;
+        }
+
+        #menuBtn {
+          display: flex;
+        }
+
+        .main-section {
+          width: 100%;
+        }
+
+        .doc-top {
+          padding: 10px 15px;
+          height: 65px;
+        }
+
+        .doc-top h2 {
+          font-size: 18px;
+        }
+
+        .doc-content {
+          padding: 30px 20px 50px;
+        }
+
+        .doc-section h1 {
+          font-size: 31px;
+        }
+
+        .doc-section h2 {
+          font-size: 22px;
+        }
+
+        .doc-section p {
+          font-size: 14px;
+        }
+
+        .feature-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .version {
+          font-size: 11px;
+          padding: 5px 8px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <aside class="side-section" id="sidebar">
+        <div id="brand">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 40 40"
+            fill="none"
+            aria-hidden="true"
+          >
+            <rect
+              x="2"
+              y="2"
+              width="36"
+              height="36"
+              rx="9"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <path
+              d="M27 12H19C13.5 12 10 15.5 10 21S13.5 29 19 29H27V23H19C17.5 23 16 22.5 16 21S17.5 18 19 18H27V12Z"
+              fill="currentColor"
+            />
+          </svg>
+          <h2 id="botName">
+            ByBot <span style="font-size: 12px; color: #6657eb">Docs</span>
+          </h2>
+        </div>
+
+        <input
+          type="search"
+          id="searchbar"
+          placeholder="Search documentation..."
+          autocomplete="off"
+          aria-label="Search documentation"
+        />
+
+        <h3 class="side-heading">Documentation</h3>
+
+        <nav class="doc-nav" id="docNav">
+          <a href="#introduction" class="active">Introduction</a>
+          <a href="#features">Features</a>
+          <a href="#getting-started">Getting Started</a>
+          <a href="#interface">Interface</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#knowledge-base">Knowledge Base</a>
+          <a href="#mathematics">Mathematics</a>
+          <a href="#project-structure">Project Structure</a>
+          <a href="#security">Security</a>
+          <a href="#limitations">Limitations</a>
+          <a href="#future">Future Development</a>
+        </nav>
+
+        <p id="noResults">No matching sections found.</p>
+
+        <div class="side-bottom">
+          <a href="index.html" class="back-btn">
+            <span>←</span>
+            Back to ByBot
+          </a>
+        </div>
+      </aside>
+
+      <div id="overlay"></div>
+
+      <main class="main-section" id="mainSection">
+        <header class="doc-top">
+          <button id="menuBtn" aria-label="Open documentation menu">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 6H20M4 12H20M4 18H20"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+
+          <h2>ByBot <span>Documentation</span></h2>
+          <span class="version">Version 1.0</span>
+        </header>
+
+        <div class="doc-content">
+          <section class="doc-section searchable" id="introduction">
+            <p class="eyebrow">Welcome to ByBot</p>
+            <h1>Meet <span>ByBot.</span></h1>
+
+            <p>
+              ByBot is a chatbot project built with HTML, CSS and JavaScript. It
+              provides a simple interface where users can send messages and
+              receive responses from a bot.
+            </p>
+
+            <p>
+              This documentation explains the interface, the knowledge base, the
+              project structure and how the different parts work together.
+            </p>
+
+            <div class="intro-box">
+              <p><strong>About this version</strong></p>
+              <p>
+                ByBot v1.0 focuses on the core chatbot experience, including
+                displaying messages, matching user input against stored
+                responses and providing a foundation for future improvements.
+              </p>
+            </div>
+          </section>
+
+          <section class="doc-section searchable" id="features">
+            <p class="eyebrow">What it can do</p>
+            <h2>Features</h2>
+
+            <div class="feature-grid">
+              <div class="feature-card">
+                <h3>Chat Interface</h3>
+                <p>
+                  A simple interface for sending messages and viewing responses.
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <h3>Knowledge Base</h3>
+                <p>Responses can be organised in a separate JSON file.</p>
+              </div>
+
+              <div class="feature-card">
+                <h3>Mathematics</h3>
+                <p>
+                  JavaScript can process supported mathematical expressions.
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <h3>Chat History</h3>
+                <p>
+                  The interface can organise previous conversations for easier
+                  access.
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <h3>Responsive Layout</h3>
+                <p>
+                  The layout adapts to smaller screens, including mobile
+                  devices.
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <h3>Dark Mode</h3>
+                <p>The interface includes CSS styles for a dark appearance.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="doc-section searchable" id="getting-started">
+            <p class="eyebrow">Installation</p>
+            <h2>Getting Started</h2>
+
+            <p>
+              ByBot is a front-end project. You can run its interface locally
+              using a development server such as the Live Server extension in VS
+              Code.
+            </p>
+
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Open the project</h3>
+                <p>Open the ByBot project folder in Visual Studio Code.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Check the files</h3>
+                <p>
+                  Make sure your HTML, CSS, JavaScript and JSON files are in the
+                  correct locations.
+                </p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Start Live Server</h3>
+                <p>Open index.html and launch it using Live Server.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h3>Start chatting</h3>
+                <p>
+                  Enter a message in the chat box and send it to test the
+                  chatbot.
+                </p>
+              </div>
+            </div>
+
+            <div class="info-box">
+              <p>
+                <strong>Important:</strong> If your JavaScript loads a JSON file
+                with fetch(), run the project through a local server instead of
+                opening the HTML file directly.
+              </p>
+            </div>
+          </section>
+
+          <section class="doc-section searchable" id="interface">
+            <p class="eyebrow">User interface</p>
+            <h2>Understanding the Interface</h2>
+
+            <h3>Sidebar</h3>
+            <p>
+              The sidebar contains the ByBot branding, documentation navigation
+              and a button that takes you back to the main chatbot.
+            </p>
+
+            <h3>Chat area</h3>
+            <p>
+              The chat area displays the conversation. User messages and bot
+              responses should be presented separately so the conversation
+              remains easy to follow.
+            </p>
+
+            <h3>Message input</h3>
+            <p>
+              The message input allows users to type their questions. Depending
+              on the implementation, messages can be sent using the send button
+              or the Enter key.
+            </p>
+
+            <h3>Chat history</h3>
+            <p>
+              Previous conversations can be displayed in the sidebar. Whether
+              conversations remain available after a page refresh depends on how
+              the application stores them.
+            </p>
+          </section>
+
+          <section class="doc-section searchable" id="how-it-works">
+            <p class="eyebrow">Behind the scenes</p>
+            <h2>How It Works</h2>
+
+            <p>
+              ByBot's main parts have different responsibilities. HTML defines
+              the structure, CSS controls the appearance, JavaScript handles
+              behaviour, and JSON can store response data.
+            </p>
+
+            <div class="code-box">
+              <pre>
+index.html
+    ↓
+style.css
+    ↓
+js/script.js
+    ↓
+js/response.json</pre
+              >
+            </div>
+
+            <h3>HTML</h3>
+            <p>
+              Creates the page structure, including the sidebar, chat area and
+              input field.
+            </p>
+
+            <h3>CSS</h3>
+            <p>
+              Controls layout, spacing, colours, borders, responsive behaviour
+              and dark mode.
+            </p>
+
+            <h3>JavaScript</h3>
+            <p>
+              Processes user interactions and determines how messages and bot
+              responses are handled.
+            </p>
+
+            <h3>JSON</h3>
+            <p>
+              Stores structured response data that JavaScript can load and use.
+            </p>
+          </section>
+
+          <section class="doc-section searchable" id="knowledge-base">
+            <p class="eyebrow">Response system</p>
+            <h2>Knowledge Base</h2>
+
+            <p>
+              A JSON knowledge base lets you keep bot responses separate from
+              the main JavaScript logic. This makes it easier to add new
+              responses without rewriting the entire chatbot.
+            </p>
+
+            <p>A response entry might look like this:</p>
+
+            <div class="code-box">
+              <pre>
+{
+  "greetings": {
+    "patterns": [
+      "hi",
+      "hello",
+      "hey"
+    ],
+    "responses": [
+      "Hello! How can I help you?",
+      "Hey! What's up?"
+    ]
+  }
+}</pre
+              >
+            </div>
+
+            <p>
+              In this example, the <strong>patterns</strong> array contains
+              phrases the chatbot can recognise, while the
+              <strong>responses</strong> array contains possible replies.
+            </p>
+
+            <div class="info-box">
+              <p>
+                The exact structure must match the format expected by your
+                JavaScript code. This example is illustrative; it does not
+                automatically change your existing knowledge base.
+              </p>
+            </div>
+          </section>
+
+          <section class="doc-section searchable" id="mathematics">
+            <p class="eyebrow">Calculations</p>
+            <h2>Mathematics</h2>
+
+            <p>
+              JavaScript can be used to recognise and calculate supported
+              mathematical expressions, allowing ByBot to answer simple
+              arithmetic questions.
+            </p>
+
+            <p>Examples of expressions a calculation feature might support:</p>
+
+            <ul>
+              <li>Addition: 2 + 2</li>
+              <li>Subtraction: 10 - 4</li>
+              <li>Multiplication: 6 × 3</li>
+              <li>Division: 20 ÷ 5</li>
+              <li>Brackets: (2 + 3) × 4</li>
+            </ul>
+
+            <div class="info-box">
+              <p>
+                Supported operations depend on your calculator implementation.
+                Never evaluate arbitrary user input as JavaScript with eval()
+                without a safe expression parser.
+              </p>
+            </div>
+          </section>
+
+          <section class="doc-section searchable" id="project-structure">
+            <p class="eyebrow">Organisation</p>
+            <h2>Project Structure</h2>
+
+            <p>A possible structure for the current ByBot project is:</p>
+
+            <div class="code-box">
+              <pre>
+ByBot/
+├── index.html
+├── style.css
+├── documentation.html
+└── js/
+    ├── script.js
+    └── response.json</pre
+              >
+            </div>
+
+            <ul>
+              <li><strong>index.html</strong> — the main chatbot page.</li>
+              <li><strong>style.css</strong> — the main interface styles.</li>
+              <li>
+                <strong>documentation.html</strong> — this documentation page.
+              </li>
+              <li>
+                <strong>js/script.js</strong> — chatbot behaviour and
+                interactions.
+              </li>
+              <li>
+                <strong>js/response.json</strong> — stored chatbot responses.
+              </li>
+            </ul>
+
+            <p>
+              Your actual folder structure may differ. If it does, keep the file
+              paths in your HTML and JavaScript consistent with it.
+            </p>
+          </section>
+
+          <section class="doc-section searchable" id="security">
+            <p class="eyebrow">Keeping it safe</p>
+            <h2>Security</h2>
+
+            <p>
+              If you add external APIs to ByBot, protect any secret API keys. A
+              key placed in front-end JavaScript can be viewed by users through
+              their browser.
+            </p>
+
+            <ul>
+              <li>
+                Do not place private API keys in HTML, CSS or browser
+                JavaScript.
+              </li>
+              <li>
+                Use a server-side endpoint to make requests that require secret
+                keys.
+              </li>
+              <li>Validate user input before processing it.</li>
+              <li>Avoid executing arbitrary user input as code.</li>
+              <li>
+                Handle failed requests and unexpected responses gracefully.
+              </li>
+            </ul>
+
+            <div class="info-box">
+              <p>
+                A local development server helps run the project, but it does
+                not by itself protect secret API keys.
+              </p>
+            </div>
+          </section>
+
+          <section class="doc-section searchable" id="limitations">
+            <p class="eyebrow">Current version</p>
+            <h2>Limitations</h2>
+
+            <p>
+              ByBot v1.0 is an evolving project. Its actual capabilities depend
+              on the JavaScript and APIs currently connected to it.
+            </p>
+
+            <ul>
+              <li>Responses may be limited by the available knowledge base.</li>
+              <li>
+                Different wording can make a question harder to recognise.
+              </li>
+              <li>
+                Mathematical support depends on the implemented calculator.
+              </li>
+              <li>
+                External information requires a working search service or API
+                integration.
+              </li>
+              <li>
+                Conversation persistence depends on the storage method used.
+              </li>
+            </ul>
+
+            <p>
+              These are general considerations, not a claim that every
+              limitation applies to your current implementation.
+            </p>
+          </section>
+
+          <section class="doc-section searchable" id="future">
+            <p class="eyebrow">What's next</p>
+            <h2>Future Development</h2>
+
+            <p>
+              ByBot can be expanded over time with more advanced features.
+              Possible areas for improvement include:
+            </p>
+
+            <ul>
+              <li>Smarter matching of user questions.</li>
+              <li>Secure integration with web search APIs.</li>
+              <li>Improved mathematical expression handling.</li>
+              <li>Saving and restoring conversations.</li>
+              <li>Better error handling and loading indicators.</li>
+              <li>More accessible controls and keyboard navigation.</li>
+            </ul>
+
+            <p>
+              The aim is to build on the existing foundation gradually, keeping
+              the interface simple while making the chatbot more useful.
+            </p>
+          </section>
+
+          <footer class="doc-footer">
+            <p>ByBot v1.0 · Built by <span>Cajetan Weath</span></p>
+          </footer>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      const menuBtn = document.getElementById("menuBtn");
+      const overlay = document.getElementById("overlay");
+      const searchbar = document.getElementById("searchbar");
+      const mainSection = document.getElementById("mainSection");
+      const navLinks = [...document.querySelectorAll(".doc-nav a")];
+      const sections = [...document.querySelectorAll(".doc-section")];
+      const noResults = document.getElementById("noResults");
+
+      function openMenu() {
+        sidebar.classList.add("slide");
+        overlay.classList.add("show");
+      }
+
+      function closeMenu() {
+        sidebar.classList.remove("slide");
+        overlay.classList.remove("show");
+      }
+
+      menuBtn.addEventListener("click", openMenu);
+      overlay.addEventListener("click", closeMenu);
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          closeMenu();
+
+          navLinks.forEach((item) => item.classList.remove("active"));
+          link.classList.add("active");
+        });
+      });
+
+      searchbar.addEventListener("input", () => {
+        const query = searchbar.value.trim().toLowerCase();
+        let visibleCount = 0;
+
+        sections.forEach((section) => {
+          const matchingLink = navLinks.find(
+            (link) => link.getAttribute("href") === "#" + section.id,
+          );
+
+          const matches =
+            section.textContent.toLowerCase().includes(query) ||
+            (matchingLink &&
+              matchingLink.textContent.toLowerCase().includes(query));
+
+          section.style.display = matches ? "" : "none";
+
+          if (matchingLink) {
+            matchingLink.classList.toggle("hidden", !matches);
+          }
+
+          if (matches) {
+            visibleCount++;
+          }
+        });
+
+        noResults.style.display = visibleCount === 0 ? "block" : "none";
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (searchbar.value.trim()) return;
+
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              navLinks.forEach((link) => {
+                link.classList.toggle(
+                  "active",
+                  link.getAttribute("href") === "#" + entry.target.id,
+                );
+              });
+            }
+          });
+        },
+        {
+          root: mainSection,
+          rootMargin: "-15% 0px -70% 0px",
+        },
+      );
+
+      sections.forEach((section) => observer.observe(section));
+
+      if (localStorage.getItem("bybTheme")) {
+        document.body.classList.add("dark");
+      }
+
+      window.addEventListener("storage", (event) => {
+        if (event.key === "theme") {
+          document.body.classList.toggle("dark", event.newValue === "dark");
+        }
+      });
+    </script>
+  </body>
+</html>
