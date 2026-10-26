@@ -231,7 +231,7 @@ body {
   margin: 0px 10px;
   cursor: pointer;
   white-space:no-wrap;
-  width:fit-content;
+  width:max-content;
 }
 
 .fcon .options:active {
