@@ -231,7 +231,10 @@ body {
   margin: 0px 10px;
   cursor: pointer;
   white-space:no-wrap;
-  width:max-content;
+  width:150px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .fcon .options:active {
