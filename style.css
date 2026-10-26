@@ -220,6 +220,7 @@ body {
   justify-content: center;
   margin-top: 15px;
   overflow-x:scroll;
+  width:90%;
 }
 
 .fcon .options {
