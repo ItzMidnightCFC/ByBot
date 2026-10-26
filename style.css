@@ -148,7 +148,7 @@ body {
   flex-direction: column;
   /* background-color: orange; */
   overflow: hidden;
-  height: 100vh;
+  height: 90vh;
 }
 
 .chat-side {
@@ -543,7 +543,7 @@ body.dark #themebtn path {
 }
 
 @media (max-width: 700px) {
-  #canSide {
+  .chat-section #canSide {
     display: none;
   }
   .chat-top .new-btn {
@@ -598,6 +598,9 @@ body.dark #themebtn path {
     transition: transform 0.25s ease-in-out;
   }
 
+  .message-side {
+    position: relative;
+  }
   .side-section.slide {
     transform: translateX(0px);
   }
