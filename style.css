@@ -217,10 +217,10 @@ body {
 .op-box {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 15px;
-  overflow-x:scroll;
-  width:90%;
+  overflow-x: auto;
+  width: 90%;
 }
 
 .fcon .options {
